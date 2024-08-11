@@ -1,6 +1,6 @@
 import random
-from os import listdir
-
+import os
+import sys
 import pygame
 from pygame.constants import QUIT, K_DOWN, K_UP, K_LEFT, K_RIGHT
 
@@ -20,11 +20,16 @@ font = pygame.font.SysFont("Verdana", 20)
 
 main_surface = pygame.display.set_mode(screen)
 
-IMGS_PATH = 'goose'
+def resource_path(relative):
+    if hasattr(sys, "_MEIPASS"):
+        return os.path.join(sys._MEIPASS, relative)
+    return os.path.join(relative)
+
+IMGS_PATH = resource_path('goose')
 
 # player = pygame.Surface((20, 20))
 # player.fill(WHITE)
-player_imgs = [pygame.image.load(IMGS_PATH + '/' + file).convert_alpha() for file in listdir(IMGS_PATH)]
+player_imgs = [pygame.image.load(IMGS_PATH + '/' + file).convert_alpha() for file in os.listdir(IMGS_PATH)]
 player = player_imgs[0]
 player_rect = player.get_rect()
 player_speed = 5
@@ -33,7 +38,7 @@ def create_enemy():
     # enemy = pygame.Surface((20, 20))
     # enemy.fill(RED)
     enemy_size = 100, 20
-    enemy = pygame.transform.scale(pygame.image.load("enemy.png").convert_alpha(), enemy_size)
+    enemy = pygame.transform.scale(pygame.image.load(resource_path("enemy.png")).convert_alpha(), enemy_size)
     enemy_rect = pygame.Rect(width, random.randint(50, height-50), *enemy.get_size())
     enemy_speed = random.randint(2, 5)
     return [enemy, enemy_rect, enemy_speed]
@@ -42,12 +47,12 @@ def create_bonus():
     # bonus = pygame.Surface((20, 20))
     # bonus.fill(GREEN)
     bonus_size = 40, 80
-    bonus = pygame.transform.scale(pygame.image.load("bonus.png").convert_alpha(), bonus_size)
+    bonus = pygame.transform.scale(pygame.image.load(resource_path("bonus.png")).convert_alpha(), bonus_size)
     bonus_rect = pygame.Rect(random.randint(40, width-40), 0, *bonus.get_size())
     bonus_speed = random.randint(2, 5)
     return [bonus, bonus_rect, bonus_speed]
 
-bg = pygame.transform.scale(pygame.image.load("background.png").convert(), screen)
+bg = pygame.transform.scale(pygame.image.load(resource_path("background.png")).convert(), screen)
 bgx = 0
 bgx2 = bg.get_width()
 bg_speed = 3

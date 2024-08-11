@@ -27,3 +27,19 @@ All actions should be executed from the source directory of the project and only
    ```bash
    python main.py 
    ```
+
+## Creating an Executable
+
+To create an executable of the game, follow these steps:
+
+1. Make sure PyInstaller is installed:
+   ```bash
+   pip install pyinstaller
+   ```
+
+2. Run PyInstaller with the spec file:
+   ```bash
+   pyinstaller exe/Bander-goose.spec
+   ```
+
+This will generate an executable in the dist folder, using the spec file located in the exe folder.
