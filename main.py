@@ -3,12 +3,13 @@ import os
 import sys
 import pygame
 from pygame.constants import QUIT, K_DOWN, K_UP, K_LEFT, K_RIGHT
+from ctypes import windll
 
 pygame.init()
 
 FPS = pygame.time.Clock()
 
-screen = width, height = 800, 600
+screen = width, height = windll.user32.GetSystemMetrics(0), windll.user32.GetSystemMetrics(1)
 
 BLACK = 0, 0, 0
 WHITE = 255, 255, 255

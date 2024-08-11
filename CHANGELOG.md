@@ -1,5 +1,10 @@
 # Changelog
 
+## [v_0.1.1] - 2024-08-11
+### Changed
+- Updated the screen initialization to use dynamic system dimensions.
+- Corrected the PyInstaller command in the README file.
+
 ## [v_0.1.0] - 2024-08-11
 ### Added
 - Created a folder named `exe` containing the game executable and auxiliary files for creating the executable.

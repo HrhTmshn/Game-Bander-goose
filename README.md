@@ -39,7 +39,7 @@ To create an executable of the game, follow these steps:
 
 2. Run PyInstaller with the spec file:
    ```bash
-   pyinstaller exe/Bander-goose.spec
+   pyinstaller exe/main.spec
    ```
 
 This will generate an executable in the dist folder, using the spec file located in the exe folder.
