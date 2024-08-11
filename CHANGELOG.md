@@ -1,5 +1,11 @@
 # Changelog
 
+## [v_0.1.2] - 2024-08-11
+### Updates
+- Improved enemy removal logic to check if enemies have fully exited the screen.
+- Updated collision detection to use `colliderect` method for more accurate results.
+- Enhanced code readability by reformatting and simplifying some logic.
+
 ## [v_0.1.1] - 2024-08-11
 ### Changed
 - Updated the screen initialization to use dynamic system dimensions.
