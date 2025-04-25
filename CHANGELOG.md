@@ -1,5 +1,10 @@
 # Changelog
 
+## [v_0.1.3] - 2025-04-25
+### Added
+- Created and embedded a gameplay GIF preview into the `README.md`
+- Added `LICENSE` file with a custom "Portfolio Only" license
+
 ## [v_0.1.2] - 2024-08-11
 ### Updates
 - Improved enemy removal logic to check if enemies have fully exited the screen.

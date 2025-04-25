@@ -2,6 +2,8 @@
 
 A Pygame-based mini-game where players control Bander-goose, a character that flies from left to right, catching valuable cargo while dodging incoming rockets. The game tracks the number of cargo collected, adding an element of challenge and competition.
 
+![Game Preview](gameplay.gif)
+
 #### Stack:
 
 - [Python](https://www.python.org/downloads/)
@@ -43,3 +45,10 @@ To create an executable of the game, follow these steps:
    ```
 
 This will generate an executable in the dist folder, using the spec file located in the exe folder.
+
+## License
+
+This project is licensed for **educational and portfolio review purposes only**.  
+Commercial or personal use, distribution, or modification is **not permitted**.
+
+See the [LICENSE](./LICENSE) file for more details.
